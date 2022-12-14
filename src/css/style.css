@@ -114,9 +114,9 @@ body{
     right: 20px;
 }
 
-.conteudo-principal .paineis .seta.btn-voltar:hover, .conteudo-principal .paineis .seta.btn-avancar:hover{
-    width: 55px;
-    height: 55px;
+.opacidade{
+    opacity: 0.6;
+    cursor: default;
 }
 
 .quem-somos{

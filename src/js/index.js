@@ -12,14 +12,32 @@ setaAvancar.addEventListener('click', function(){
    if(imagemAtual === totalDeImagens) {return;}
 
    imagemAtual++;
-   esconderImagens();
-   mostrarImagens();
+   esconderImagens()
+   mostrarImagens()
+   mostrarOuEsconderSetas()
 })
 
 setaVoltar.addEventListener('click', function(){
     if(imagemAtual === 0) {return;}
     
     imagemAtual--;
-    esconderImagens();
-    mostrarImagens();
+    esconderImagens()
+    mostrarImagens()
+    mostrarOuEsconderSetas()
 })
+
+function mostrarOuEsconderSetas(){
+    const SaiuDaPrimeiraImagem = imagemAtual !== 0;
+    if(SaiuDaPrimeiraImagem){
+        setaVoltar.classList.remove('opacidade')
+    } else {
+        setaVoltar.classList.add('opacidade')
+    }
+
+    const chegouNaUltimaSeta = imagemAtual !== 0 && imagemAtual === imagensPainel.length -1;
+    if(chegouNaUltimaSeta){
+        setaAvancar.classList.add('opacidade')
+    } else {
+        setaAvancar.classList.remove('opacidade')
+    }
+}

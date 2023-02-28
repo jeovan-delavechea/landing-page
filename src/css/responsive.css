@@ -20,7 +20,6 @@
 
 @media(max-width: 630px){
     .cabecalho{
-        justify-content: center;
         gap:30px;
     }
     .cabecalho .menu .item a{
